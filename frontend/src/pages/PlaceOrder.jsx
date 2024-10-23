@@ -5,9 +5,9 @@ import { useNavigate } from 'react-router-dom'
 
 
 
-const PlaceOrder = () => {
+const PlaceOrder = ({setShowLogin}) => {
 
-  const {getTotalCartAmount,token ,food_list,cartItems,url} = useContext(StoreContext)
+  const {getTotalCartAmount, token ,food_list,cartItems,url} = useContext(StoreContext)
   const navigate = useNavigate();
   const [data,setData] = useState({
     firstName:"",
@@ -54,14 +54,17 @@ const PlaceOrder = () => {
       }
   }
 
-  useEffect(()=>{
-    if(!token){
-      navigate('/cart')
 
-    }else if(getTotalCartAmount()===0){
+
+  useEffect(()=>{
+    if(!token || getTotalCartAmount()===0){
       navigate('/cart')
+      setShowLogin(true)
     }
-  },[token])
+
+  },[token,setShowLogin])
+
+
  
  
 
