@@ -62,7 +62,7 @@ const Cart = () => {
               <b>${getTotalCartAmount()!==0? getTotalCartAmount() +2:0}</b>
             </div>
           </div>
-            <button onClick={()=>navigate('/order')} className='border-none bg-[tomato] text-white width-[15vw] py-[12px] px-[12px] rounded-[4px] cursor-pointer'>PROCEED TO CHECKOUT</button>
+            <button onClick={()=>navigate('/orders')} className='border-none bg-[tomato] text-white width-[15vw] py-[12px] px-[12px] rounded-[4px] cursor-pointer'>PROCEED TO CHECKOUT</button>
         </div>
         <div className="flex-1 w-full lg:w-50%">
           <div className=''>
