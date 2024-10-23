@@ -57,7 +57,7 @@ const LoginPopup = ({setShowLogin}) => {
                 currentState==="Sign Up"? <input onChange={onChagneHandler} value={data.name} className='outline-none border-[1px] border-solid border-[#c9c9c9] p-2.5' type='text' placeholder='Your Name' name='name' required/>:<></>
                 }
                 <input onChange={onChagneHandler} value={data.email} name='email'  className='outline-none border-[1px] border-solid border-[#c9c9c9] p-2.5' type='email' placeholder='Your Email' required/>
-                <input  onChange={onChagneHandler} value={data.password} name='password' className='outline-none border-[1px] border-solid border-[#c9c9c9] p-2.5' type='password' placeholder='Password' required/>
+                <input  onChange={onChagneHandler} value={data.password} name='password' className='outline-none border-[1px] border-solid border-[#c9c9c9] p-2.5' type='password' placeholder='Password' required autoComplete='true'/>
             </div>
             <button type='submit' className='border-none p-2.5 rounded-[4px] text-white bg-[tomato] text-[15px] cursor-pointer'>{currentState==="Sign Up"?"Create Account":"Login"}</button>
             <div className='flex items-start gap-[10px] mt-[-15px]'> {/*llogin-popup-cond */}
